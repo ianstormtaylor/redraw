@@ -1,0 +1,28 @@
+<html>
+<head>
+  <style>
+    div {
+      transition: all 1s;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    .red { background-color: red }
+    .green { background-color: green }
+  </style>
+</head>
+<body>
+  <script src="../build/build.js"></script>
+  <script>
+    var redraw = require('redraw');
+    var div = document.createElement('div');
+    div.className = 'red';
+    document.body.appendChild(div);
+    redraw(div);
+    div.className = 'green';
+    // should animate from red to green
+  </script>
+</body>
+</html>
